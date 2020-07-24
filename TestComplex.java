@@ -11,19 +11,19 @@ public class TestComplex {
 
 
         sp1.inSP();
-        System.out.print("\n");
+        System.out.println();
         sp2.inSP();
-        System.out.print("\n");
+        System.out.println();
         sp3.inSP();
-        System.out.print("\n");
+        System.out.println();
         sp4.inSP();
 
         //Cong 2 sp:
-        System.out.print("\nTong 2 so phuc 1 va 2 la: ");
+        System.out.println("Tong 2 so phuc 1 va 2 la: ");
         sp1.addComplex(sp2).inSP();
 
         //tich 2 sp:
-        System.out.print("\nTich 2 so phuc 1 va 4 la: ");
+        System.out.println("Tich 2 so phuc 1 va 4 la: ");
         sp1.mulComplex(sp2).inSP();
     }
 }

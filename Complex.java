@@ -1,6 +1,7 @@
 package dongcode.sophuc;
 
 public class Complex {
+
     double a; //Phan thuc
     double b; //Phan ao
 
@@ -26,10 +27,10 @@ public class Complex {
     }
 
     //get,set:
-    void setPhanThuc( double thuc) {
+    void setPhanThuc(double thuc) {
         a = thuc;
     }
-    void setPhanAo( double ao) {
+    void setPhanAo(double ao) {
         b = ao;
     }
 
@@ -43,17 +44,17 @@ public class Complex {
     //Cac phep toan:
 
     Complex addComplex( Complex sp2 ) {
-        Complex sp3 = new Complex( a+sp2.a, b+sp2.b );
+        Complex sp3 = new Complex( a + sp2.a, b + sp2.b );
         return sp3;
     }
 
     Complex subComplex( Complex sp2 ) {
-        Complex sp3 = new Complex( a-sp2.a, b-sp2.b );
+        Complex sp3 = new Complex( a - sp2.a, b - sp2.b );
         return sp3;
     }
 
     Complex mulComplex( Complex sp2 ) {
-        Complex sp3 = new Complex( a*sp2.a - b*sp2.b, a*sp2.b + b*sp2.a);
+        Complex sp3 = new Complex( (a * sp2.a) - (b * sp2.b), (a * sp2.b) + (b * sp2.a) );
         return sp3;
     }
 
@@ -66,12 +67,12 @@ public class Complex {
 
     Complex divComplex( Complex sp2 ) {
         if( (sp2.a==0) && (sp2.b==0) ) {
-            System.out.print("\nSP bi chia = 0. Khong chia duoc!");
+            System.out.println("SP bi chia = 0. Khong chia duoc!");
             return null;
         }
         else {
-            double x = ( sp2.a*a + sp2.b*b )/(sp2.a*sp2.a + sp2.b*sp2.b);
-            double y = ( sp2.a*b - sp2.b*a )/(sp2.a*sp2.a + sp2.b*sp2.b);
+            double x = ( (sp2.a * a) + (sp2.b * b) ) / ( (sp2.a * sp2.a) + (sp2.b * sp2.b) );
+            double y = ( (sp2.a * b) - (sp2.b * a) ) / ( (sp2.a * sp2.a) + (sp2.b * sp2.b) );
             Complex sp3 = new Complex( x,y );
             return sp3;
         }
@@ -80,27 +81,27 @@ public class Complex {
     //In so phuc:
     void inSP() {
 
-        if ( a==0 ) {
-            if( b>0 ) {
-                System.out.print(b+"i");
+        if ( a == 0 ) {
+            if( b > 0 ) {
+                System.out.print(b + "i");
             }
-            else if( b==0 ){
+            else if( b == 0 ){
                 System.out.print(a);
             }
             else {
-                System.out.print(b+"i");
+                System.out.print(b +  "i");
             }
         }
 
         else {
-            if( b>0 ) {
-                System.out.print(a+"+"+b+"i");
+            if( b > 0 ) {
+                System.out.print(a + "+" + b + "i");
             }
-            else if( b==0 ){
+            else if( b == 0 ){
                 System.out.print(a);
             }
             else {
-                System.out.print(a+"-"+(-b)+"i");
+                System.out.print(a + "-" + (-b) + "i");
             }
         }
     }

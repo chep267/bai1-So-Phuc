@@ -6,7 +6,7 @@ public class Complex {
     double b; //Phan ao
 
     //ham tao:
-    Complex(){
+    Complex() {
         a = 0;
         b = 0;
     }
@@ -44,12 +44,12 @@ public class Complex {
     //Cac phep toan:
 
     Complex addComplex( Complex sp2 ) {
-        Complex sp3 = new Complex( a + sp2.a, b + sp2.b );
+        Complex sp3 = new Complex( (a + sp2.a) , (b + sp2.b) );
         return sp3;
     }
 
     Complex subComplex( Complex sp2 ) {
-        Complex sp3 = new Complex( a - sp2.a, b - sp2.b );
+        Complex sp3 = new Complex( (a - sp2.a) , (b - sp2.b) );
         return sp3;
     }
 
@@ -66,7 +66,7 @@ public class Complex {
 //    }
 
     Complex divComplex( Complex sp2 ) {
-        if( (sp2.a==0) && (sp2.b==0) ) {
+        if( (sp2.a == 0) && (sp2.b == 0) ) {
             System.out.println("SP bi chia = 0. Khong chia duoc!");
             return null;
         }
